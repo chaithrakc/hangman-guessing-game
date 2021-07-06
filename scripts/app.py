@@ -36,4 +36,5 @@ if __name__ == '__main__':
     words = app.load_word_theme()
     word_hint = random.choice(list(words.items()))  # randomly selecting a word withing a particular theme file
     hangman = Hangman(word_hint, hangmans, app.word_them)
-    hangman.play()
+    won = hangman.play()
+    print('You Won!' if won else 'You Lost.')
