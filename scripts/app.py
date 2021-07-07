@@ -28,6 +28,14 @@ class App:
             hangmans_pics = file_handler.read()
             return hangmans_pics.split(',')
 
+    def display_results(self, results):
+        print('-' * 50)
+        won = f'\t\t\t{TerminalColors.FAIL}YOU WON!{TerminalColors.ENDC}'
+        lost = f'\t\t\t{TerminalColors.FAIL}YOU LOST{TerminalColors.ENDC}'
+        print(won if results else lost)
+        print(f'\tSecret Word is {TerminalColors.FAIL}{word_hint[0]}!{TerminalColors.ENDC}')
+        print('-' * 50)
+
 
 if __name__ == '__main__':
     app = App()
@@ -35,9 +43,5 @@ if __name__ == '__main__':
     words = app.load_word_theme()
     word_hint = random.choice(list(words.items()))  # randomly selecting a word withing a particular theme file
     hangman = Hangman(word_hint, hangmans, app.word_them)
-    won = hangman.play()
-    print('-' * 50)
-    print(
-        f'\t\t\t{TerminalColors.FAIL}YOU WON!{TerminalColors.ENDC}' if won else f'\t\t\t{TerminalColors.FAIL}YOU LOST{TerminalColors.ENDC}')
-    print(f'\tSecret Word is {TerminalColors.FAIL}{word_hint[0]}!{TerminalColors.ENDC}')
-    print('-' * 50)
+    result = hangman.play()
+    app.display_results(result)

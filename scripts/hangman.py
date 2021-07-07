@@ -53,7 +53,7 @@ class Hangman:
 
     def display_hangman(self, hangman):
         lines = hangman.split('\n')
-        lines[1] = lines[1] + '\t\t\t\t(' + self.theme + ')'
+        lines[1] = lines[1] + '\t\t\t\t (' + self.theme + ')'
         lines[2] = lines[2] + '\t\t\tMissed Letters: ' + ','.join(self.missed_letters)
         lines[3] = lines[3] + '\t\t\tWord: ' + ''.join(self.blanks)
         print('\n'.join(lines))
