@@ -11,32 +11,28 @@ class TerminalColors:
 
 
 already_exists = f'{TerminalColors.OKGREEN}{TerminalColors.BOLD}Already guessed that letter. Choose again.{TerminalColors.ENDC}'
+default_width = 50
+divider = ''.ljust(default_width, '-')
 theme = ''
 blanks = list()
 missed_letters = set()
 
 
 def display_results(results, secret_word):
-    print('-' * 50)
-    won = f'\t\t\t{TerminalColors.FAIL}YOU WON!{TerminalColors.ENDC}'
-    lost = f'\t\t\t{TerminalColors.FAIL}YOU LOST{TerminalColors.ENDC}'
-    print(won if results else lost)
-    print(f'\tSecret Word is {TerminalColors.FAIL}{secret_word}!{TerminalColors.ENDC}')
-    print('-' * 50)
+    print(divider)
+    won = TerminalColors.FAIL+'YOU WON!'+TerminalColors.ENDC
+    lost = f'{TerminalColors.FAIL}YOU LOST{TerminalColors.ENDC}'
+    print(won.center(default_width) if results else lost.center(default_width))
+    print(f'Secret Word is {TerminalColors.FAIL}{secret_word}!{TerminalColors.ENDC}'.center(default_width))
+    print(divider)
 
 
 def display_hangman(hangman):
+    str_theme = '(' + theme + ')'
+    str_missed_letters = 'Missed Letters: ' + ','.join(missed_letters)
+    str_word = 'Word: ' + ''.join(blanks)
     lines = hangman.split('\n')
-    lines[1] = lines[1] + '\t\t\t\t (' + theme + ')'
-    lines[2] = lines[2] + '\t\t\tMissed Letters: ' + ','.join(missed_letters)
-    lines[3] = lines[3] + '\t\t\tWord: ' + ''.join(blanks)
-    print('\n'.join(lines))
-
-
-def display_finalstate():
-    lines = list()
-    lines.append('-' * 50)
-    lines.append('\t\t\t(' + theme + ')')
-    lines.append('\t\tMissed Letters: ' + ','.join(missed_letters))
-    lines.append('\t\tWord: ' + ''.join(blanks))
+    lines[1] = lines[1] + str_theme.center(default_width)
+    lines[2] = lines[2] + str_missed_letters.center(default_width)
+    lines[3] = lines[3] + str_word.center(default_width)
     print('\n'.join(lines))
