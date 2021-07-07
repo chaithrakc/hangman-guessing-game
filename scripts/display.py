@@ -14,25 +14,26 @@ already_exists = f'{TerminalColors.OKGREEN}{TerminalColors.BOLD}Already guessed 
 default_width = 50
 divider = ''.ljust(default_width, '-')
 theme = ''
-blanks = list()
-missed_letters = set()
+hint = ''
 
 
 def display_results(results, secret_word):
     print(divider)
-    won = TerminalColors.FAIL+'YOU WON!'+TerminalColors.ENDC
-    lost = f'{TerminalColors.FAIL}YOU LOST{TerminalColors.ENDC}'
+    won = TerminalColors.FAIL + 'YOU WON! 😊' + TerminalColors.ENDC
+    lost = f'{TerminalColors.FAIL}YOU LOST ☹️{TerminalColors.ENDC}'
     print(won.center(default_width) if results else lost.center(default_width))
     print(f'Secret Word is {TerminalColors.FAIL}{secret_word}!{TerminalColors.ENDC}'.center(default_width))
     print(divider)
 
 
-def display_hangman(hangman):
+def display_hangman(probability, hangmans, missed_letters, blanks):
     str_theme = '(' + theme + ')'
     str_missed_letters = 'Missed Letters: ' + ','.join(missed_letters)
     str_word = 'Word: ' + ''.join(blanks)
-    lines = hangman.split('\n')
+    lines = hangmans[len(missed_letters)].split('\n')
     lines[1] = lines[1] + str_theme.center(default_width)
     lines[2] = lines[2] + str_missed_letters.center(default_width)
     lines[3] = lines[3] + str_word.center(default_width)
+    if probability < 1:
+        lines[5] = lines[5] + f'{TerminalColors.OKBLUE} {hint.center(default_width)}{TerminalColors.ENDC}'
     print('\n'.join(lines))

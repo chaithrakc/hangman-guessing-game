@@ -2,8 +2,7 @@ import json
 import os
 import random
 
-import aesthetics
-from aesthetics import display_results
+import display
 from hangman import Hangman
 
 
@@ -12,7 +11,7 @@ class App:
     WORD_THEME_ = 'word_theme_'
 
     def set_theme(self, file_name: str):
-        aesthetics.theme = file_name[file_name.index(self.WORD_THEME_) + len(self.WORD_THEME_): file_name.index('.json')]
+        display.theme = file_name[file_name.index(self.WORD_THEME_) + len(self.WORD_THEME_): file_name.index('.json')]
 
     def load_word_theme(self) -> dict:
         resources = os.listdir(os.path.join('..', 'resources'))
@@ -34,6 +33,7 @@ if __name__ == '__main__':
     app = App()
     hangmans = app.load_hangman_pics()
     words = app.load_word_theme()
-    word_hint = random.choice(list(words.items()))  # randomly selecting a word withing a particular theme file
-    hangman = Hangman(word_hint, hangmans)
+    word, hint = random.choice(list(words.items()))  # randomly selecting a word withing a particular theme file
+    display.hint = '💡 ' + hint
+    hangman = Hangman(word, hangmans)
     hangman.play()
