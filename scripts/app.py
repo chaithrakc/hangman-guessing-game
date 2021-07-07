@@ -2,6 +2,7 @@ import json
 import os
 import random
 
+from ansi_colors import TerminalColors
 from hangman import Hangman
 
 
@@ -10,21 +11,19 @@ class App:
     WORD_THEME_ = 'word_theme_'
 
     def set_theme(self, file_name: str):
-        start_index = file_name.index(self.WORD_THEME_) + len(self.WORD_THEME_)
-        end_index = file_name.index('.json')
-        self.word_them = file_name[start_index: end_index]
+        self.word_them = file_name[file_name.index(self.WORD_THEME_) + len(self.WORD_THEME_): file_name.index('.json')]
 
     def load_word_theme(self) -> dict:
-        resources = os.listdir('../resources')
+        resources = os.listdir(os.path.join('..', 'resources'))
         word_files = list(filter(lambda input_file: input_file.find(self.WORD_THEME_) > -1, resources))
         file_name = random.choice(word_files)  # randomly selecting one of the theme
         self.set_theme(file_name)
-        relative_filepath = os.path.join('', '../resources', '../resources/' + file_name)
+        relative_filepath = os.path.join('..', 'resources', file_name)
         with open(relative_filepath) as file_handler:
             return json.load(file_handler)
 
     def load_hangman_pics(self) -> list:
-        relative_filepath = os.path.join('', '../resources', 'hangman_pics.txt')
+        relative_filepath = os.path.join('..', 'resources', 'hangman_pics.txt')
         with open(relative_filepath) as file_handler:
             hangmans_pics = file_handler.read()
             return hangmans_pics.split(',')
@@ -37,4 +36,8 @@ if __name__ == '__main__':
     word_hint = random.choice(list(words.items()))  # randomly selecting a word withing a particular theme file
     hangman = Hangman(word_hint, hangmans, app.word_them)
     won = hangman.play()
-    print('You Won!' if won else 'You Lost.')
+    print('-' * 50)
+    print(
+        f'\t\t\t{TerminalColors.FAIL}YOU WON!{TerminalColors.ENDC}' if won else f'\t\t\t{TerminalColors.FAIL}YOU LOST{TerminalColors.ENDC}')
+    print(f'\tSecret Word is {TerminalColors.FAIL}{word_hint[0]}!{TerminalColors.ENDC}')
+    print('-' * 50)
