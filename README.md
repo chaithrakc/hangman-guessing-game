@@ -2,76 +2,85 @@
  one player thinks of a word and the other tries to guess it by suggesting letters within a certain number of guesses.
 ```
   +---+
-  |   |				(movie)
-      |			Missed Letters: 
-      |			Word: _ _ _ _ _ _ _
+  |   |                     (animal)                     
+      |                 Missed Letters:                  
+      |              Word: _ _ _ _ _ _ _ _               
       |
-      |
-=========
-Guess the letter or the entire word:n
-  +---+
-  |   |				(movie)
-      |			Missed Letters: 
-      |			Word: _ _ _ _ n _ _
-      |
-      |
+      |                  💡 large in size!                 
 =========
 Guess the letter or the entire word:e
+  +---+
+  |   |                     (animal)                     
+      |                 Missed Letters:                  
+      |              Word: e _ e _ _ _ _ _               
+      |
+      |
+=========
+Guess the letter or the entire word:l
+  +---+
+  |   |                     (animal)                     
+      |                 Missed Letters:                  
+      |              Word: e l e _ _ _ _ _               
+      |
+      |
+=========
+Guess the letter or the entire word:g
 
-  +---+				(movie)
-  |   |			Missed Letters: e
-  O   |			Word: _ _ _ _ n _ _
+  +---+                     (animal)                     
+  |   |                Missed Letters: g                 
+  O   |              Word: e l e _ _ _ _ _               
       |
       |
       |
 =========
-Guess the letter or the entire word:w
+Guess the letter or the entire word:q
 
-  +---+				(movie)
-  |   |			Missed Letters: w,e
-  O   |			Word: _ _ _ _ n _ _
+  +---+                     (animal)                     
+  |   |               Missed Letters: q,g                
+  O   |              Word: e l e _ _ _ _ _               
   |   |
       |
       |
 =========
-Guess the letter or the entire word:y
+Guess the letter or the entire word:zz
 
-  +---+				(movie)
-  |   |			Missed Letters: w,y,e
-  O   |			Word: _ _ _ _ n _ _
+  +---+                     (animal)                     
+  |   |               Missed Letters: q,g                
+  O   |              Word: e l e _ _ _ _ _               
+  |   |
+      |
+      |
+=========
+Guess the letter or the entire word:x
+
+  +---+                     (animal)                     
+  |   |              Missed Letters: q,g,x               
+  O   |              Word: e l e _ _ _ _ _               
  /|   |
       |
       |
 =========
-Guess the letter or the entire word:o
+Guess the letter or the entire word:elephannt
 
-  +---+				(movie)
-  |   |			Missed Letters: w,y,o,e
-  O   |			Word: _ _ _ _ n _ _
- /|\  |
+  +---+                     (animal)                     
+  |   |              Missed Letters: q,g,x               
+  O   |              Word: e l e _ _ _ _ _               
+ /|   |
       |
       |
 =========
-Guess the letter or the entire word:k
+Guess the letter or the entire word:elephant
 
-  +---+				(movie)
-  |   |			Missed Letters: k,w,e,o,y
-  O   |			Word: _ _ _ _ n _ _
- /|\  |
- /    |
+  +---+                     (animal)                     
+  |   |              Missed Letters: q,g,x               
+  O   |              Word: e l e p h a n t               
+ /|   |
       |
-=========
-Guess the letter or the entire word:f
-
-  +---+				(movie)
-  |   |			Missed Letters: k,w,e,o,y,f
-  O   |			Word: _ _ _ _ n _ _
- /|\  |
- / \  |
       |
 =========
 --------------------------------------------------
-		YOU LOST
-	Secret Word is titanic!
+        Congratulations, You Won!        
+        Secret Word is elephant!         
 --------------------------------------------------
+
 ```
