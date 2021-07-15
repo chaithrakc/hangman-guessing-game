@@ -1,0 +1,13 @@
+{
+  "quick sort": "pivot",
+  "queue": "data structure",
+  "stack": "data structure",
+  "list": "data structure",
+  "bubble sort": "sorting algo",
+  "selection sort": "sorting algo",
+  "recursion": "run back",
+  "insertion sort": "sorting algo",
+  "merge sort": "divide and conquer",
+  "database": "storage",
+  "binary search": "logarithmic"
+}
