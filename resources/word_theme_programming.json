@@ -3,11 +3,11 @@
   "queue": "data structure",
   "stack": "data structure",
   "list": "data structure",
-  "bubble sort": "sorting algo",
-  "selection sort": "sorting algo",
+  "bubble sort": "sorting algorithm",
+  "selection sort": "sorting algorithm",
   "recursion": "run back",
-  "insertion sort": "sorting algo",
+  "insertion sort": "sorting algorithm",
   "merge sort": "divide and conquer",
   "database": "storage",
-  "binary search": "logarithmic"
+  "binary search": "logarithmic search"
 }
