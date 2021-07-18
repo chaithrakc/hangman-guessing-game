@@ -2,85 +2,103 @@
  one player thinks of a word, and the other tries to guess it by suggesting letters within a certain number of guesses.
 ```
   +---+
-  |   |                     (animal)                     
+  |   |                  (programming)                   
       |                 Missed Letters:                  
-      |              Word: _ _ _ _ _ _ _ _               
+      |                 Word: _ _ _ _ _                  
       |
-      |                  💡 large in size!                 
+      |                 💡 data structure                 
 =========
-Guess the letter or the entire word:e
+Guess the letter or the entire word:s
   +---+
-  |   |                     (animal)                     
+  |   |                  (programming)                   
       |                 Missed Letters:                  
-      |              Word: e _ e _ _ _ _ _               
+      |                 Word: s _ _ _ _                  
       |
-      |
+      |                 💡 data structure                 
 =========
-Guess the letter or the entire word:l
-  +---+
-  |   |                     (animal)                     
-      |                 Missed Letters:                  
-      |              Word: e l e _ _ _ _ _               
-      |
-      |
-=========
-Guess the letter or the entire word:g
+Guess the letter or the entire word:i
 
-  +---+                     (animal)                     
-  |   |                Missed Letters: g                 
-  O   |              Word: e l e _ _ _ _ _               
+  +---+                  (programming)                   
+  |   |                Missed Letters: i                 
+  O   |                 Word: s _ _ _ _                  
       |
-      |
+      |                 💡 data structure                 
       |
 =========
-Guess the letter or the entire word:q
+Guess the letter or the entire word:o
 
-  +---+                     (animal)                     
-  |   |               Missed Letters: q,g                
-  O   |              Word: e l e _ _ _ _ _               
+  +---+                  (programming)                   
+  |   |               Missed Letters: i,o                
+  O   |                 Word: s _ _ _ _                  
   |   |
-      |
+      |                 💡 data structure                 
       |
 =========
-Guess the letter or the entire word:zz
+Guess the letter or the entire word:p
 
-  +---+                     (animal)                     
-  |   |               Missed Letters: q,g                
-  O   |              Word: e l e _ _ _ _ _               
-  |   |
-      |
+  +---+                  (programming)                   
+  |   |              Missed Letters: p,i,o               
+  O   |                 Word: s _ _ _ _                  
+ /|   |
+      |                 💡 data structure                 
       |
 =========
 Guess the letter or the entire word:x
 
-  +---+                     (animal)                     
-  |   |              Missed Letters: q,g,x               
-  O   |              Word: e l e _ _ _ _ _               
- /|   |
-      |
-      |
-=========
-Guess the letter or the entire word:elephannt
-
-  +---+                     (animal)                     
-  |   |              Missed Letters: q,g,x               
-  O   |              Word: e l e _ _ _ _ _               
- /|   |
-      |
+  +---+                  (programming)                   
+  |   |             Missed Letters: p,i,o,x              
+  O   |                 Word: s _ _ _ _                  
+ /|\  |
+      |                 💡 data structure                 
       |
 =========
-Guess the letter or the entire word:elephant
+Guess the letter or the entire word:t
 
-  +---+                     (animal)                     
-  |   |              Missed Letters: q,g,x               
-  O   |              Word: e l e p h a n t               
- /|   |
+  +---+                  (programming)                   
+  |   |             Missed Letters: p,i,o,x              
+  O   |                 Word: s t _ _ _                  
+ /|\  |
+      |                 💡 data structure                 
       |
+=========
+Guess the letter or the entire word:a
+
+  +---+                  (programming)                   
+  |   |             Missed Letters: p,i,o,x              
+  O   |                 Word: s t a _ _                  
+ /|\  |
+      |                 💡 data structure                 
+      |
+=========
+Guess the letter or the entire word:c
+
+  +---+                  (programming)                   
+  |   |             Missed Letters: p,i,o,x              
+  O   |                 Word: s t a c _                  
+ /|\  |
+      |                 💡 data structure                 
+      |
+=========
+Guess the letter or the entire word:z
+
+  +---+                  (programming)                   
+  |   |            Missed Letters: p,x,i,o,z             
+  O   |                 Word: s t a c _                  
+ /|\  |
+ /    |                 💡 data structure                 
+      |
+=========
+Guess the letter or the entire word:w
+
+  +---+                  (programming)                   
+  |   |           Missed Letters: p,x,w,i,o,z            
+  O   |                 Word: s t a c _                  
+ /|\  |
+ / \  |                 💡 data structure                 
       |
 =========
 --------------------------------------------------
-        Congratulations, You Won!        
-        Secret Word is elephant!         
+                You Lost the Game!                
+              Secret Word is stack!               
 --------------------------------------------------
-
 ```

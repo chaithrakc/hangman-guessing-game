@@ -16,7 +16,7 @@ def display_results(results, secret_word) -> None:
 
 
 def display_hangman(hangmans, missed_letters, blanks) -> None:
-    clear_console()
+    #clear_console()
     str_theme = '(' + theme + ')'
     str_missed_letters = 'Missed Letters: ' + ','.join(missed_letters)
     str_word = 'Word: ' + ''.join(blanks)

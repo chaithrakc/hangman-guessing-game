@@ -46,4 +46,3 @@ class Hangman:
         result = self.start()
         display_hangman(self.hangmans, self.missed_letters, self.blanks)
         display_results(result, self.word)
-        display(self.hangmans)
