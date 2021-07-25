@@ -2,103 +2,104 @@
  one player thinks of a word, and the other tries to guess it by suggesting letters within a certain number of guesses.
 ```
   +---+
-  |   |                  (programming)                   
+  |   |               (Theme:programming)                
       |                 Missed Letters:                  
-      |                 Word: _ _ _ _ _                  
+      |        Word: _ _ _ _ _ _ _ _ _   _ _ _ _         
       |
-      |                 💡 data structure                 
+      |               💡 sorting algorithm                
+=========
+Guess the letter or the entire word:q
+
+  +---+               (Theme:programming)                
+  |   |                Missed Letters: q                 
+  O   |        Word: _ _ _ _ _ _ _ _ _   _ _ _ _         
+      |
+      |               💡 sorting algorithm                
+      |
+=========
+Guess the letter or the entire word:m
+
+  +---+               (Theme:programming)                
+  |   |               Missed Letters: q,m                
+  O   |        Word: _ _ _ _ _ _ _ _ _   _ _ _ _         
+  |   |
+      |               💡 sorting algorithm                
+      |
+=========
+Guess the letter or the entire word:b
+
+  +---+               (Theme:programming)                
+  |   |              Missed Letters: q,m,b               
+  O   |        Word: _ _ _ _ _ _ _ _ _   _ _ _ _         
+ /|   |
+      |               💡 sorting algorithm                
+      |
 =========
 Guess the letter or the entire word:s
-  +---+
-  |   |                  (programming)                   
-      |                 Missed Letters:                  
-      |                 Word: s _ _ _ _                  
+
+  +---+               (Theme:programming)                
+  |   |              Missed Letters: q,m,b               
+  O   |        Word: _ _ s _ _ _ _ _ _   s _ _ _         
+ /|   |
+      |               💡 sorting algorithm                
       |
-      |                 💡 data structure                 
 =========
 Guess the letter or the entire word:i
 
-  +---+                  (programming)                   
-  |   |                Missed Letters: i                 
-  O   |                 Word: s _ _ _ _                  
-      |
-      |                 💡 data structure                 
+  +---+               (Theme:programming)                
+  |   |              Missed Letters: q,m,b               
+  O   |        Word: i _ s _ _ _ i _ _   s _ _ _         
+ /|   |
+      |               💡 sorting algorithm                
       |
 =========
 Guess the letter or the entire word:o
 
-  +---+                  (programming)                   
-  |   |               Missed Letters: i,o                
-  O   |                 Word: s _ _ _ _                  
-  |   |
-      |                 💡 data structure                 
-      |
-=========
-Guess the letter or the entire word:p
-
-  +---+                  (programming)                   
-  |   |              Missed Letters: p,i,o               
-  O   |                 Word: s _ _ _ _                  
+  +---+               (Theme:programming)                
+  |   |              Missed Letters: q,m,b               
+  O   |        Word: i _ s _ _ _ i o _   s o _ _         
  /|   |
-      |                 💡 data structure                 
+      |               💡 sorting algorithm                
       |
 =========
-Guess the letter or the entire word:x
+Guess the letter or the entire word:g
 
-  +---+                  (programming)                   
-  |   |             Missed Letters: p,i,o,x              
-  O   |                 Word: s _ _ _ _                  
+  +---+               (Theme:programming)                
+  |   |             Missed Letters: g,q,m,b              
+  O   |        Word: i _ s _ _ _ i o _   s o _ _         
  /|\  |
-      |                 💡 data structure                 
+      |               💡 sorting algorithm                
+      |
+=========
+Guess the letter or the entire word:k
+
+  +---+               (Theme:programming)                
+  |   |            Missed Letters: q,b,k,m,g             
+  O   |        Word: i _ s _ _ _ i o _   s o _ _         
+ /|\  |
+ /    |               💡 sorting algorithm                
       |
 =========
 Guess the letter or the entire word:t
 
-  +---+                  (programming)                   
-  |   |             Missed Letters: p,i,o,x              
-  O   |                 Word: s t _ _ _                  
+  +---+               (Theme:programming)                
+  |   |            Missed Letters: q,b,k,m,g             
+  O   |        Word: i _ s _ _ t i o _   s o _ t         
  /|\  |
-      |                 💡 data structure                 
+ /    |               💡 sorting algorithm                
       |
 =========
-Guess the letter or the entire word:a
+Guess the letter or the entire word:h
 
-  +---+                  (programming)                   
-  |   |             Missed Letters: p,i,o,x              
-  O   |                 Word: s t a _ _                  
+  +---+               (Theme:programming)                
+  |   |           Missed Letters: q,b,h,k,m,g            
+  O   |        Word: i _ s _ _ t i o _   s o _ t         
  /|\  |
-      |                 💡 data structure                 
-      |
-=========
-Guess the letter or the entire word:c
-
-  +---+                  (programming)                   
-  |   |             Missed Letters: p,i,o,x              
-  O   |                 Word: s t a c _                  
- /|\  |
-      |                 💡 data structure                 
-      |
-=========
-Guess the letter or the entire word:z
-
-  +---+                  (programming)                   
-  |   |            Missed Letters: p,x,i,o,z             
-  O   |                 Word: s t a c _                  
- /|\  |
- /    |                 💡 data structure                 
-      |
-=========
-Guess the letter or the entire word:w
-
-  +---+                  (programming)                   
-  |   |           Missed Letters: p,x,w,i,o,z            
-  O   |                 Word: s t a c _                  
- /|\  |
- / \  |                 💡 data structure                 
+ / \  |               💡 sorting algorithm                
       |
 =========
 --------------------------------------------------
                 You Lost the Game!                
-              Secret Word is stack!               
+          Secret Word is insertion sort!          
 --------------------------------------------------
 ```
